@@ -5,6 +5,7 @@ import yaml
 
 def main():
     config = yaml.load(open("config.yaml", "r"), Loader=yaml.FullLoader)
+
     # dataset = DataSetWrapper(config['batch_size'], **config['dataset'])
 
     # simclr = SimCLR(dataset, config)

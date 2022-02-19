@@ -62,20 +62,6 @@ class DataSetWrapper(object):
         return train_loader, valid_loader
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class SimCLRDataTransform():
 
     def __init__(self, transform):

@@ -5,8 +5,8 @@ import shutil
 import numpy as np
 import torch.nn.functional as F
 
-# from loss.nt_xent import NTXentLoss
-# from models.resnet_simclr import ResNetSimCLR
+from loss_functions import NTXentLoss
+from resnet_simclr import ResNetSimCLR
 from torch.utils.tensorboard import SummaryWriter
 
 
@@ -44,7 +44,7 @@ class SimCLR():
         print("Running on:", device)
         return device
 
-    def _step(self, model, xis, xjs, n_iter):
+    def _step(self, model, xis, xjs, n_iter):  # TODO n_iter never gets called?
         # get the representations and the projections
         ris, zis = model(xis)  # [N,C]
         # get the representations and the projections
